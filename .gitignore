@@ -1,0 +1,24 @@
+# Independent repositories and local reference materials
+/repos/
+/references/opensource-code-pro/
+# Local agent configuration, installed skills and runtime state
+/.claude/
+/.codex/
+/.agents/
+/.aws/
+/.reasonix/
+/.dsh/
+/.qoder/
+/.vscode/
+# Private local registry and material
+/config/repos.local.json
+/local/
+/outputs/
+/tmp/
+/logs/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.DS_Store

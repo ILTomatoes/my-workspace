@@ -1,0 +1,16 @@
+{
+  "repos": [
+    {
+      "name": "obsidian-personal",
+      "path": "repos/notes/obsidian-personal",
+      "url": "git@github.com:YOUR_ACCOUNT/YOUR_PRIVATE_VAULT.git",
+      "purpose": "第一个 Obsidian 私有笔记库，使用时替换名称和地址"
+    },
+    {
+      "name": "obsidian-work",
+      "path": "repos/notes/obsidian-work",
+      "url": "git@github.com:YOUR_ACCOUNT/YOUR_SECOND_PRIVATE_VAULT.git",
+      "purpose": "第二个 Obsidian 私有笔记库，使用时替换名称和地址"
+    }
+  ]
+}

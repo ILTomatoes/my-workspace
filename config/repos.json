@@ -1,0 +1,58 @@
+{
+  "repos": [
+    {
+      "name": "my-ai-observe-notes",
+      "path": "repos/notes/my-ai-observe-notes",
+      "url": "git@github.com:ILTomatoes/my-ai-observe-notes.git",
+      "purpose": "MkDocs 笔记发布站"
+    },
+    {
+      "name": "my-daily-remarks",
+      "path": "repos/notes/my-daily-remarks",
+      "url": "git@github.com:ILTomatoes/my-daily-remarks.git",
+      "purpose": "日常资料收录与提炼"
+    },
+    {
+      "name": "ai-coding-share",
+      "path": "repos/projects/ai-coding-share",
+      "url": "git@github.com:ILTomatoes/ai-coding-share.git",
+      "purpose": "AI 编程分享材料"
+    },
+    {
+      "name": "my-skills-market",
+      "path": "repos/projects/my-skills-market",
+      "url": "git@github.com:ILTomatoes/my-skills-market.git",
+      "purpose": "个人技能市场"
+    },
+    {
+      "name": "ai-coding-practice",
+      "path": "repos/learning/ai-coding-practice",
+      "url": "git@github.com:ILTomatoes/ai-coding-practice.git",
+      "purpose": "AI 编程实践与研究"
+    },
+    {
+      "name": "personal-study-project",
+      "path": "repos/learning/personal-study-project",
+      "url": "git@github.com:ILTomatoes/personal-study-project.git",
+      "purpose": "编程学习与练习"
+    },
+    {
+      "name": "my-obsidian-notes",
+      "path": "repos/notes/my-obsidian-notes",
+      "url": "git@github.com:ILTomatoes/my-obsidian-notes.git",
+      "purpose": "Obsidian 个人笔记库"
+    },
+    {
+      "name": "my-obsidian-knowledge-base",
+      "path": "repos/notes/my-obsidian-knowledge-base",
+      "url": "git@github.com:ILTomatoes/my-obsidian-knowledge-base.git",
+      "purpose": "Obsidian 个人知识库"
+    },
+    {
+      "name": "my-exam-gaoxiang",
+      "path": "repos/learning/my-exam-gaoxiang",
+      "url": "git@github.com:ILTomatoes/my-exam-gaoxiang.git",
+      "purpose": "高项考试备考项目"
+    }
+  ]
+}
