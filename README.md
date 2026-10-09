@@ -50,6 +50,8 @@ cd repos/projects/my-skills-market
 
 新机器先克隆本仓库，再运行 `python3 scripts/setup.py` 创建本地目录；Agent 从 `AGENTS.md` 读取入口，按任务加载相关知识和技能。初始化不会自动安装技能到用户目录。
 
+在根目录直接提出“我想学习 XXX”即可：AGENTS.md 指引 Agent 加载学习技能、定位学科并恢复进度。通用技术学习归入 personal-study-project，高项备考归入 my-exam-gaoxiang，具体技能入口见 skills/README.md。若工具不自动读取入口文件，请在首次任务中要求它先读 AGENTS.md。
+
 ## 内容放哪里
 
 - 项目源码、项目文档：对应的 `repos/projects/<name>/`。
