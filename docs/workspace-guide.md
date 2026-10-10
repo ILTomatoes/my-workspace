@@ -1,5 +1,7 @@
 # 使用与维护
 
+日常任务的仓库选择与写入建议见 [仓库索引](repositories.md) 和 [Agent 使用指南](agent-guide.md)。
+
 ## 新机器恢复
 
 1. 克隆 `https://github.com/ILTomatoes/my-workspace.git`。
@@ -14,6 +16,8 @@
 在 `config/repos.json` 中追加记录：`name` 是唯一名称，`path` 是工作空间相对路径，`url` 是无凭证的远程地址，`purpose` 描述用途。
 
 不希望公开名称和地址的仓库，只在 `config/repos.local.json` 添加记录。两份清单里的 name 和 path 不应重复。两个 Obsidian 库已登记在 config/repos.json，可用 `python3 scripts/repos.py clone my-obsidian-notes my-obsidian-knowledge-base` 恢复到本地。
+
+同时更新 [docs/repositories.md](repositories.md) 的用途、读取入口和写入建议，再运行 `python3 scripts/repos.py list` 检查清单能否正确加载，并用 `git check-ignore repos/<分类>/<name>/` 确认独立仓库受到忽略规则保护。
 
 运行 `python3 scripts/repos.py status` 检查当前分支和改动。工具只读取状态，不自动拉取、重置、提交或推送；需要同步时进入相应仓库执行 Git 操作。
 

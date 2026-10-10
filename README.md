@@ -4,6 +4,17 @@
 
 借鉴 aip-workspace 的「工作空间 + 独立仓库 + 仓库清单」方式，先保持轻量；具体源码、完整笔记和项目历史留在各自仓库。
 
+## 给日常任务和 Agent 的入口
+
+这个工作空间也可作为 Hermes Agent 等助手的任务根目录：查询已有资料、整理日常收录、修改项目内容、维护计划与跨项目知识。内容的实际归属由仓库清单和目标仓库约定决定。
+
+- 协作规则：[AGENTS.md](AGENTS.md)。
+- 按任务选择仓库：[仓库索引](docs/repositories.md)；名称、路径与远端以 [config/repos.json](config/repos.json) 和可选本地清单为准。
+- 查询、写入、归档和交接：[Agent 使用指南](docs/agent-guide.md)。
+- 克隆、同步与新增仓库：[使用与维护](docs/workspace-guide.md)。
+
+通常从任务相关的索引、README 和近期内容开始读。清单表示“已登记”，不代表当前机器已克隆；本地状态通过 `python3 scripts/repos.py status` 查看。
+
 ## 目录
 
 ```text
