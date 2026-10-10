@@ -6,14 +6,22 @@
 
 新增技能时，在下面登记名称、用途和源文件路径。优先从多次使用的成熟做法提炼，不预先堆积空技能。
 
+以现有源码讲解、AI 分析笔记为材料的专题学习，可先阅读 ai-coding-practice 对应主题；不必为单次阅读初始化学科或建立额外追踪器。希望持续辅导和练习时，再按下面的技能路由组织学科。
+
+## 工作空间同步
+
+[workspace-git-sync](workspace-git-sync/SKILL.md) 提供父仓库与清单仓库的快进同步、异常汇总，以及按当前任务范围审查提交和推送的建议。用户提出“同步仓库”“拉取最新”“推送”时加载此技能。实现入口为 `scripts/workspace-git-sync.py`，不自动提交或推送，也不自动安装到宿主。
+
 ## 已登记的学习技能
 
 这些技能的维护源位于独立技能市场仓库，本目录登记引用，不再复制一份。路径以 config/repos.json 中的仓库位置为准；下表使用当前默认布局。
 
 | 技能 | 适用请求 | 维护源入口 | 学习内容归属 |
 |---|---|---|---|
-| learning-tutor | 开始或继续技术学习、练习、调试与复习 | repos/projects/my-skills-market/plugins/learning-tutor/skills/learning-tutor/SKILL.md | repos/learning/personal-study-project/<学科>/ |
+| learning-tutor | 持续学科辅导、练习、调试与复习 | repos/projects/my-skills-market/plugins/learning-tutor/skills/learning-tutor/SKILL.md | repos/learning/personal-study-project/<学科>/ |
 | ispm-exam-coach | 软考高项应试规划、资料消化、模考反馈 | repos/projects/my-skills-market/plugins/ispm-exam-coach/skills/ispm-exam-coach/SKILL.md | repos/learning/my-exam-gaoxiang/ |
+
+系统架构设计师考试资料与备考记录归入 `repos/learning/my-exam-sa/`。当前未登记该考试的专属教练技能，不直接套用高项的 ispm-exam-coach；普通概念讲解可按需使用 learning-tutor，记录位置和流程遵循考试仓库的实际约定。
 
 Agent 应先加载市场源入口，只按需读取配套 references/ 和脚本。市场源缺失时，learning-tutor 可使用 personal-study-project/.claude/skills/learning-tutor/SKILL.md，考试教练也可使用该仓库内的 .claude/skills/ispm-exam-coach/SKILL.md；说明实际使用位置，不把不同副本同时加载。副本可能落后于市场源，以实际读取的文件为准。
 
@@ -22,8 +30,9 @@ Agent 应先加载市场源入口，只按需读取配套 references/ 和脚本�
 ```bash
 python3 scripts/setup.py
 python3 scripts/repos.py clone my-skills-market personal-study-project
-# 高项备考需要时再克隆：
+# 按目标考试克隆需要的资料仓库：
 python3 scripts/repos.py clone my-exam-gaoxiang
+python3 scripts/repos.py clone my-exam-sa
 ```
 
 若宿主不自动读取 AGENTS.md / CLAUDE.md，启动任务时显式要求它先读根目录 AGENTS.md。这里提供文件级路由，不保证各宿主自动注册原生技能命令。

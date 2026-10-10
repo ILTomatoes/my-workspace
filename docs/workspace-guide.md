@@ -27,10 +27,16 @@
 
 - journal/：当天完成了什么、得到什么结论、下一步是什么。
 - plans/：目标、范围、阶段和验收；业余项目也从这里起步。
-- learning/：某项技术的学习路径、实验结论和可复用总结。
+- learning/：跨主题技术总结；专题分析学习归 ai-coding-practice，持续学科会话、练习和进度归 personal-study-project。
 - references/：来源链接、阅读索引和个人提炼；原始下载内容放本地参考目录。
 
-完整笔记归属 Obsidian 库，项目自身资料归属项目仓库，工作空间保留跨项目的入口和总结，避免重复维护正文。
+工作项目笔记与日志归属 my-obsidian-notes，长期知识卡片归属 my-obsidian-knowledge-base；文章视频收录归属 my-daily-remarks，公开文章归属 my-ai-observe-notes。项目自身资料归属项目仓库，工作空间保留跨项目的入口和总结，避免重复维护正文。
+
+## 同步
+
+按 [workspace-git-sync](../skills/workspace-git-sync/SKILL.md) 操作。`python3 scripts/workspace-git-sync.py` 同步父仓库及公共/本地清单仓库，也可指定名称；workspace 表示父仓库。使用 `--dry-run` 仅检查本地条件，使用 `--prune-merged` 清理已合并且上游已消失的本地分支。存在跳过、异常或待推送项时返回非零，具体情况见逐仓库汇总。
+
+脚本不 stash、reset、rebase、强推或自动提交；有本地工作先保留并说明，按任务授权处理后再同步。它不会扫描清单外的参考源码。
 
 ## 提交与备份
 

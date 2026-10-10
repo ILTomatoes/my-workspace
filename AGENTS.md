@@ -11,7 +11,9 @@
 本约定适用于 Hermes Agent 及其他在此工作的助手。任务操作建议见 docs/agent-guide.md。
 
 - 查询先按 docs/repositories.md 选择相关仓库，使用 config/repos.json 和可选本地清单解析路径；在目标索引和目录内搜索，按需扩大范围。区分登记信息、本地文件和实时远端状态。
-- “收录文章/视频、记下阅读提炼”默认归入 my-daily-remarks；“整理公开文章”归入 my-ai-observe-notes。完整私人笔记归入对应 Obsidian 库；两个库之间无法判断归属时再询问。
+- “收录文章/视频、记下阅读提炼”默认归入 my-daily-remarks；“整理公开文章”归入 my-ai-observe-notes。项目工作笔记和日志归入 my-obsidian-notes，长期知识卡片与主题连接归入 my-obsidian-knowledge-base；仅在具体任务仍无法判断归属时询问。
+- 通过阅读分析资料学习，或保存 AI 生成的源码讲解、Agent 研究、技术或行业调研笔记时，默认归入 ai-coding-practice 的已有主题目录；记录来源和验证范围，不把生成的分析当作已核实事实。明确属于其他项目的分析仍写入对应项目仓库。
+- 专题调研也可在 Obsidian 库中建立独立文件夹。落点优先遵循用户指定的仓库/目录，其次沿用已有专题；两者都未明确时才按默认用途选择。工作相关专题可放 my-obsidian-notes，个人长期研究可放 my-obsidian-knowledge-base；不强制迁往 ai-coding-practice，不重复保存整套正文。专题资料无需全部拆成永久知识卡片，提炼为永久笔记时再遵守该库的 MOC 约定。
 - 项目资料写入对应项目仓库；跨项目计划、工作记录、技术总结、来源索引、成熟经验分别归入 plans/、journal/、learning/、references/、knowledge/。短任务不强制留档。
 - 写入前读取目标仓库 README、适用的 AGENTS.md / CLAUDE.md 和相关模板、现有索引；优先补充已有主题，新增正文时同步该仓库要求的索引。
 - 来源事实、Agent 分析和用户自己的观点分开表达。未取得全文时注明阅读范围；不要把生成的观点冒充用户的“我的提炼”。
@@ -23,11 +25,17 @@
 用户在此提出“我想学习 XXX”“继续学 XXX”或“复习 XXX”时，可直接开展学习，无需用户先切换目录或手动调用技能。
 
 - 先读 skills/README.md 的学习技能路由，加载实际 SKILL.md 正文；支持文件读取即可使用，不要求宿主已安装同名技能。
-- 通用技术学习默认使用 learning-tutor，持久学科归入清单中的 personal-study-project。高项应试规划使用 ispm-exam-coach，资料和进度归入 my-exam-gaoxiang。高项中的普通概念讲解仍可用 learning-tutor，不同时套用两套记录协议。
+- 以源码讲解、AI 分析笔记为材料的专题学习优先读取 ai-coding-practice 的现有主题；仅阅读或讨论不强制新建学科或进度。
+- 按学科开展持续辅导、练习和复习时默认使用 learning-tutor，持久学科归入清单中的 personal-study-project。高项应试规划使用 ispm-exam-coach，资料和进度归入 my-exam-gaoxiang。高项中的普通概念讲解仍可用 learning-tutor，不同时套用两套记录协议。
+- 系统架构设计师考试的资料、练习和备考记录归入 my-exam-sa，先读取该仓库现有内容并按需补充；不直接套用高项专属的 ispm-exam-coach 或把记录写入 my-exam-gaoxiang。普通概念讲解可按需使用 learning-tutor，持久记录以考试仓库自身约定为准。
 - 根据 config/repos.json 和可选本地清单解析仓库位置。仓库未落地时，可按用户的学习目标使用 scripts/repos.py clone 克隆所需仓库；访问失败就说明缺少的仓库或技能，不声称已加载。可先做临时讲解，不伪造持久记录。
 - 持久学习前检查目标仓库状态，读取适用的 AGENTS.md / CLAUDE.md；已有主题读取配置、唯一追踪器和必要的最近会话，衔接上次停点。若旧学科模板与新版技能的节奏不同，尊重用户选择和学科自定义约定，不静默重写模板。
 - 新主题先建立整体认识并开始讲解；用户希望持续学习时，在学习仓库内创建学科目录，避免重复创建已有主题。只有无法确定主题归属或关键目标时才补问。
 - 会话、练习和进度写入对应学科，不写到工作空间根目录。临时了解不强制建目录；可复用的跨主题总结才归入工作空间 learning/ 或 knowledge/。
+
+## Git 同步入口
+
+用户要求“同步仓库”“拉取最新”或“推送”时，读取 skills/workspace-git-sync/SKILL.md。默认同步集合包括父仓库和清单中的仓库；提交推送范围按当前任务确定。只需检查时使用脚本的 --dry-run；异常逐项报告，不以父仓库状态代替全空间状态。
 
 ## 仓库边界
 
@@ -39,7 +47,7 @@
 
 ## 内容与维护
 
-- 计划放 plans/，日常记录放 journal/，技术总结放 learning/，阅读提炼放 references/。
+- 工作空间的跨项目计划放 plans/，工作概览与复盘放 journal/，跨主题技术总结放 learning/，来源索引放 references/；专属项目与学习正文优先归对应仓库。
 - 私有笔记库及私有仓库名称、地址等可保存在本地清单。密钥、个人敏感材料、运行产物放忽略目录。
 - references/opensource-code-pro/ 是本地参考资料；阅读分析默认只读，需要修改时明确目标。
 - 迁移目录时保留完整 .git、未提交文件和隐藏配置；检查移动前后的 HEAD、remote 和工作树状态。
