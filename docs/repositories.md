@@ -10,6 +10,7 @@
 | 准备公开 AI 观察文章、维护笔记站 | my-ai-observe-notes | repos/notes/my-ai-observe-notes | README.md、mkdocs.yml、docs/blog/；当前文章放 docs/blog/posts/，写前参考现有文章格式；推送 main 会触发站点构建与发布 |
 | AI 编程分享、演示、讲稿与幻灯片 | ai-coding-share | repos/projects/ai-coding-share | README.md、CLAUDE.md 与 output/ 目标版本大纲；想法放 my-ideas/，参考放 reference/，讲稿和幻灯片按版本维护；2026-10-10 推送确认远端已归档只读，可查询与本地修改，远端更新需另行处理归档状态 |
 | 维护可分发的技能或插件 | my-skills-market | repos/projects/my-skills-market | README.md、目标插件的 SKILL.md；共享技能索引见工作空间 skills/README.md |
+| 链企 AI 标书写作的复刻实现（自用，自选模型、无计费，聚焦标书写作） | my-lianqi-ai-copy | repos/projects/my-lianqi-ai-copy | README.md、research/；对标产品的调研资料放 research/，设计与工程实现后续在同仓库进行 |
 | 用于个人学习的 AI 分析笔记、源码讲解、Agent 研究与调研 | ai-coding-practice | repos/learning/ai-coding-practice | README.md、编号主题目录与专题 README；按问题阅读与复习，补充分析时同步索引并记录来源和验证范围；持续学科练习另归 personal-study-project |
 | 多学科持续学习、练习与复习 | personal-study-project | repos/learning/personal-study-project | README.md、学科配置与追踪器；先按 skills/README.md 加载学习技能，再接续已有学科 |
 | 项目工作笔记、工作日志、领域资料与专题调研 | my-obsidian-notes | repos/notes/my-obsidian-notes | README.md、01项目Project/、02领域Area/ 与相邻笔记；待整理内容放 00-Inbox/，保留链接与附件 |
@@ -37,3 +38,5 @@
 核实日期：2026-10-10。本次检查九个登记仓库的根目录、README、存在的根级协作约定与相关索引；用途结合用户对学习方式的说明修正。目录和文档检查不代表子项目、技能、OCR 工具或线上站点已运行验证。分支与改动状态按任务实时查询，不固定在索引中。
 
 2026-10-10：新增并克隆 my-exam-sa，清单现有十个仓库。新仓库当前仅有 README 标题，尚未建立备考资料目录或学习追踪记录。
+
+2026-10-12：新增并克隆 my-lianqi-ai-copy（清单现有十一个仓库），用于链企 AI 标书写作的复刻实现（自用）。对标产品调研资料已归入其 research/（功能架构、API 清单、登录后实测记录），设计与工程实现将在同仓库继续进行。

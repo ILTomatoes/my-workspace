@@ -19,6 +19,12 @@
       "purpose": "面向同事的 AI 协作编程分享：案例、大纲、讲稿与 PPT"
     },
     {
+      "name": "my-lianqi-ai-copy",
+      "path": "repos/projects/my-lianqi-ai-copy",
+      "url": "git@github.com:ILTomatoes/my-lianqi-ai-copy.git",
+      "purpose": "链企AI标书写作的复刻实现：调研资料与自用工程（自选模型、无计费）"
+    },
+    {
       "name": "my-skills-market",
       "path": "repos/projects/my-skills-market",
       "url": "git@github.com:ILTomatoes/my-skills-market.git",
