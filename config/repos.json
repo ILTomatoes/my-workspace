@@ -31,6 +31,12 @@
       "purpose": "共享技能与插件的维护、分发市场源"
     },
     {
+      "name": "modular-base-platform",
+      "path": "repos/projects/modular-base-platform",
+      "url": "",
+      "purpose": "动态扩展基座平台：Koupleless 后端基座 + qiankun 前端基座 + 模块管理服务（版本对齐 aip 主线）"
+    },
+    {
       "name": "ai-coding-practice",
       "path": "repos/learning/ai-coding-practice",
       "url": "git@github.com:ILTomatoes/ai-coding-practice.git",
