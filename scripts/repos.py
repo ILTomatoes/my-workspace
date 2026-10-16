@@ -19,9 +19,14 @@ def load_repos():
             continue
         data = json.loads(source.read_text(encoding="utf-8"))
         for repo in data["repos"]:
-            for key in ("name", "path", "url", "purpose"):
+            for key in ("name", "path", "purpose"):
                 if not isinstance(repo.get(key), str) or not repo[key].strip():
                     raise ValueError(f"{filename}: missing or invalid {key}")
+            # 远端地址可留空，表示本地仓库或暂未登记远程；此时不提供 clone。
+            url = repo.get("url", "")
+            if not isinstance(url, str):
+                raise ValueError(f"{filename}: invalid url")
+            repo["url"] = url.strip()
             relative = Path(repo["path"])
             target = (ROOT / relative).resolve()
             if relative.is_absolute() or ".." in relative.parts or not target.is_relative_to(ROOT / "repos"):
@@ -57,10 +62,14 @@ def main():
     for repo in repos:
         print(f"{repo['name']}  [{repo['path']}]", flush=True)
         if args.command == "list":
-            print(f"  {repo['purpose']}\n  {repo['url']}")
+            print(f"  {repo['purpose']}\n  {repo['url'] or '(未登记远端)'}")
             continue
         target = ROOT / repo["path"]
         if args.command == "clone":
+            if not repo["url"]:
+                print("  SKIPPED: 清单未登记远端地址，无法克隆")
+                failed = True
+                continue
             if target.exists():
                 print("  SKIPPED: path already exists; inspect it with status")
                 continue

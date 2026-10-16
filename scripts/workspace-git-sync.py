@@ -94,7 +94,10 @@ def main():
     counts = Counter()
     for name in dict.fromkeys(args.names or entries):
         path, url = entries[name]
-        state, note = sync_repo(path, url, args.dry_run, args.prune_merged)
+        if name != "workspace" and not (url or "").strip():
+            state, note = "跳过", "清单未登记远端地址"
+        else:
+            state, note = sync_repo(path, url, args.dry_run, args.prune_merged)
         counts[state] += 1
         print(f"{name}: {state} — {note}", flush=True)
     print("汇总：" + " / ".join(f"{state} {count}" for state, count in counts.items()))

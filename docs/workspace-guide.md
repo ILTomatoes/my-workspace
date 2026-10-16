@@ -13,7 +13,7 @@
 
 根据用途放入 `repos/notes/`、`repos/projects/` 或 `repos/learning/`。已有仓库移动整个目录，包括 `.git` 和隐藏文件；新仓库直接克隆。
 
-在 `config/repos.json` 中追加记录：`name` 是唯一名称，`path` 是工作空间相对路径，`url` 是无凭证的远程地址，`purpose` 描述用途。
+在 `config/repos.json` 中追加记录：`name` 是唯一名称，`path` 是工作空间相对路径，`url` 是无凭证的远程地址，`purpose` 描述用途。`url` 留空表示尚未登记远端或只在本地维护，这类条目不参与 `clone` 和同步，需要时补上地址。
 
 不希望公开名称和地址的仓库，只在 `config/repos.local.json` 添加记录。两份清单里的 name 和 path 不应重复。两个 Obsidian 库已登记在 config/repos.json，可用 `python3 scripts/repos.py clone my-obsidian-notes my-obsidian-knowledge-base` 恢复到本地。
 
