@@ -88,7 +88,6 @@ python3 scripts/workspace-git-sync.py workspace my-exam-sa
 | 记录项目工作、日志和领域资料 | `repos/notes/my-obsidian-notes/` |
 | 提炼长期知识卡片、建立知识连接 | `repos/notes/my-obsidian-knowledge-base/` |
 | 整理公开的 AI 观察文章 | `repos/notes/my-ai-observe-notes/` |
-| 制作 AI 协作编程分享、大纲、讲稿与 PPT | `repos/projects/ai-coding-share/` |
 | 维护和分发共享技能、插件 | `repos/projects/my-skills-market/` |
 
 专题调研也可以保存在 Obsidian 笔记库的独立文件夹中。上表提供默认导航；用户指定的位置和已有专题优先，按主题保持一份主要正文，通过链接关联其他仓库。

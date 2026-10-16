@@ -13,12 +13,6 @@
       "purpose": "按时间收录文章与视频，保存阅读提炼和周期总结"
     },
     {
-      "name": "ai-coding-share",
-      "path": "repos/projects/ai-coding-share",
-      "url": "git@github.com:ILTomatoes/ai-coding-share.git",
-      "purpose": "面向同事的 AI 协作编程分享：案例、大纲、讲稿与 PPT"
-    },
-    {
       "name": "my-lianqi-ai-copy",
       "path": "repos/projects/my-lianqi-ai-copy",
       "url": "git@github.com:ILTomatoes/my-lianqi-ai-copy.git",

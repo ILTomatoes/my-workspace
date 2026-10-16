@@ -8,7 +8,6 @@
 |---|---|---|---|
 | 收录文章、视频，阅读提炼，周总结 | my-daily-remarks | repos/notes/my-daily-remarks | README.md、templates/note.md；正文放 notes/YYYY/YYYY-MM/，同步月度 _index.md；二次提炼放 summaries/ |
 | 准备公开 AI 观察文章、维护笔记站 | my-ai-observe-notes | repos/notes/my-ai-observe-notes | README.md、mkdocs.yml、docs/blog/；当前文章放 docs/blog/posts/，写前参考现有文章格式；推送 main 会触发站点构建与发布 |
-| AI 编程分享、演示、讲稿与幻灯片 | ai-coding-share | repos/projects/ai-coding-share | README.md、CLAUDE.md 与 output/ 目标版本大纲；想法放 my-ideas/，参考放 reference/，讲稿和幻灯片按版本维护；2026-10-10 推送确认远端已归档只读，可查询与本地修改，远端更新需另行处理归档状态 |
 | 维护可分发的技能或插件 | my-skills-market | repos/projects/my-skills-market | README.md、目标插件的 SKILL.md；共享技能索引见工作空间 skills/README.md |
 | 动态扩展基座平台（Koupleless 后端基座 + qiankun 前端基座 + 模块管理服务） | modular-base-platform | repos/projects/modular-base-platform | 只在本机维护，清单中未登记远端；读取仓库自身 README 与 AGENTS.md/CLAUDE.md，需要协作时先补远端地址 |
 | 链企 AI 标书写作的复刻实现（自用，自选模型、无计费，聚焦标书写作） | my-lianqi-ai-copy | repos/projects/my-lianqi-ai-copy | README.md、research/；对标产品的调研资料放 research/，设计与工程实现后续在同仓库进行 |
